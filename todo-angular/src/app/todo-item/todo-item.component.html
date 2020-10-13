@@ -1,0 +1,21 @@
+<div id="input">
+  <p>{{ todo.text }}</p>
+  <button
+    mat-stroked-button
+    color="accent"
+    id="button"
+    (click)="deleteTodo(todo.id)"
+  >
+    Delete todo
+  </button>
+</div>
+<style>
+  #input {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #button {
+    margin-left: 24px;
+  }
+</style>

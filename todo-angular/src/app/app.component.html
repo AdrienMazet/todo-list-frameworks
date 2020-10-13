@@ -1,0 +1,14 @@
+<div>
+  <app-header></app-header>
+  <mat-grid-list cols="1" rowHeight="20:1">
+    <mat-grid-tile
+      ><app-todo-input (add)="addTodo($event)"></app-todo-input
+    ></mat-grid-tile>
+    <mat-grid-tile *ngFor="let todo of todos">
+      <app-todo-item
+        [todo]="todo"
+        (delete)="deleteTodo($event)"
+      ></app-todo-item>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

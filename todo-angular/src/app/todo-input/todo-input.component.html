@@ -1,0 +1,22 @@
+<div id="input">
+  <mat-form-field>
+    <input matInput placeholder="Todo" [formControl]="todo" />
+  </mat-form-field>
+  <button
+    mat-stroked-button
+    color="primary"
+    id="button"
+    (click)="addTodo(todo)"
+  >
+    Add todo
+  </button>
+</div>
+<style>
+  #input {
+    display: flex;
+    flex-direction: row;
+  }
+  #button {
+    margin-left: 24px;
+  }
+</style>
